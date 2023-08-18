@@ -1,0 +1,171 @@
+:root{
+    --PrimaryColor : hsl(199,100%,33%);
+    --SecondaryColor:hsl(187, 73%, 61%);
+    --gradientColor:linear-gradient(to right, hsl(187, 57%, 51%),hsl(199, 65%, 41%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33% ,16%);
+    --textColor: hsl(240, 1%, 15%);
+    --whiteColorDeam: hsl(0, 37%, 93%);
+    --greyText:rgb(190,190,190);
+    --inputColor:rgba(184, 166, 166, 0.779);
+    --bodyColor:rbg(240,240,246);
+    --cardBG:rbg(225,225,235);
+    --cardHover:rgb(255,255,255);
+  
+  }
+  
+
+  .main{
+    width:100%;
+
+    .secTitle{
+        .title{
+            position:relative;
+            width: max-content;
+            color:rgb(60, 45, 111);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after{
+                position: absolute;
+                content: '';
+                background: rgba(105, 77, 50, 0.779);
+                height: 5px;
+                width:120px;
+                right: -1px;
+                bottom:5px;
+                z-index:-1;
+
+            }
+
+        }
+    }
+
+    .secContent{
+        justify-content: center;
+        gap:1.5rem;
+
+
+        .singleDestination{
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            padding: -1rem;
+            border-radius: 10px;
+            align-items:center;
+            background:rgba(174, 213, 216, 0.779);
+            box-shadow: 0 2px 4px rgba(252, 62, 15, 0.779);
+            overflow: hidden;
+            &:hover{
+                background: rgb(113, 187, 197) ;
+                box-shadow: 1 4px 4px rgba(146, 199, 203, 0.779);
+                transition:  .3s ease;
+            }
+
+            .imgDiv{
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+
+                img{
+                    height: 100%;
+                    width:100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+
+                }
+
+                &:hover{
+                    img{
+                        transform:scale(1.1);
+                    }
+
+                }
+            }
+
+            .cardInfo{
+                padding: 1rem;
+
+                .desTitle{
+                    color:var(--blackColor);
+                    font-size: 1.25rem;
+
+                }
+
+                .continent{
+                    gap: .5rem;
+                
+                }
+
+                .icon{
+                    color:var(--textColor);
+                    font-size: 18px;
+                }
+
+                .name{
+                    color:var(--textColor);
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+
+            }
+
+            .fees{
+                width:100%;
+                justify-content: space-between;
+                padding: 1rem;
+                margin: 1rem 0;
+                border-top: 1.5px solid rgba(105, 77, 50, 0.779);
+                border-bottom: 1.5px solid rgba(105, 77, 50, 0.779);
+            }
+
+            .grade{
+                color:rgba(3, 54, 57, 0.779);
+                max-width: 100px;
+                line-height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                small{
+                    text-align: center;
+                    background: var(--gradientColor);
+                    border-radius: 1rem;
+                    color:var(--whiteColor);
+                    padding: 1px 10px;
+                    font-size: 10px;
+    
+                }
+
+            }
+
+            .price{
+                font-size: 2rem;
+                color: rgba(3, 54, 57, 0.779);
+            }
+
+
+        }
+
+        .desc{
+            font-size: 13.5px;
+            color:rgba(0, 17, 18, 0.779);
+            font-weight: 500;
+        }
+
+        .btn{
+            margin-top: 1rem;
+            color: var(--bodyColor);
+            font-weight: 600;
+            justify-content: space-between;
+            gap: .5rem;
+
+            .icon{
+                align-self: center;
+                font-size: 18px;
+            }
+        }
+        
+    }
+
+  }
